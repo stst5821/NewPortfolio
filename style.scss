@@ -1,0 +1,98 @@
+// カラー変数
+
+$colorMain: #000;
+$colorSub: #3e6680; // borderline や h2のbgなどの色
+
+h1,
+h2,
+h3,
+p {
+    font-family: heisei-maru-gothic-std, sans-serif;
+    color: $colorSub;
+}
+
+body {
+    // background-image: url(/images/bg.jpg);
+    background-color: $colorMain;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: 5% auto;
+    padding: 4%;
+    // ↓これで背景だけ透過させる。opacityだと画像まで透過してしまう。
+    background: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    .containerMask {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 270px 1fr;
+    }
+}
+
+header {
+    grid-row: 1 / 2;
+    h1 {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        font-size: 50px;
+        img {
+            width: 80%;
+            max-width: 500px;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        border-top: 3px solid $colorSub;
+        border-bottom: 3px solid $colorSub;
+        li {
+            padding: 1% 3% 1% 3%;
+            a {
+                color: $colorSub;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+main {
+    grid-row: 2 / 3;
+    h2 {
+        background: $colorSub;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .cell {
+        width: 30%;
+        min-width: 250px;
+        margin: 1% auto;
+        img {
+            width: 100%;
+            margin-bottom: 5%;
+        }
+        h3 {
+            margin-bottom: 3%;
+            font-size: 18px;
+        }
+    }
+    .is-empty {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
