@@ -1,13 +1,14 @@
 h1,
 h2,
 h3,
-p {
+p,
+a {
   font-family: heisei-maru-gothic-std, sans-serif;
-  color: #3e6680;
+  color: #776955;
 }
 
 body {
-  background-color: #000;
+  background-color: #f8c68b;
 }
 
 .container {
@@ -58,8 +59,8 @@ header ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-top: 3px solid #3e6680;
-  border-bottom: 3px solid #3e6680;
+  border-top: 3px solid #f8b668;
+  border-bottom: 3px solid #f8b668;
 }
 
 header ul li {
@@ -67,7 +68,6 @@ header ul li {
 }
 
 header ul li a {
-  color: #3e6680;
   font-size: 20px;
 }
 
@@ -78,7 +78,7 @@ main {
 }
 
 main h2 {
-  background: #3e6680;
+  background: #f8b668;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -112,7 +112,12 @@ main h2 {
 
 .grid .cell h3 {
   margin-bottom: 3%;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.grid .cell p {
+  word-wrap: break-word;
+  margin: 3% 0 3% 0;
 }
 
 .grid .is-empty {
